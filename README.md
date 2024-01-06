@@ -1,7 +1,7 @@
 # django-ums
 
 #### 介绍
-基于Django Python Web框架 + MySQL + Bootstrap 开发的用户管理系统, 目前包括：部门管理、用户管理、认证-注册登录、文件上传等功能。期待您的 Star 关注，支持我继续优化此项目！
+基于Django Python Web框架 + MySQL + Bootstrap 开发的用户管理系统, 目前包括：部门管理、用户管理、认证-注册登录、文件上传等功能。
 
 #### 软件架构
 前端：Jquery、Bootstrap
