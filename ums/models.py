@@ -21,3 +21,16 @@ class UserInfo(models.Model):
 
     # dept_id = models.ForeignKey(to=Department, to_field='id', null=True, blank=True, on_delete=models.SET_NULL)
     dept = models.ForeignKey(verbose_name="部门", to='Department', to_field="id", on_delete=models.CASCADE)
+
+class XX(models.Model):
+    title = models.CharField(verbose_name="名称", max_length=32)
+    image = models.FileField(verbose_name="头像", upload_to="avatar/")
+
+
+class City(models.Model):
+    """ 城市 """
+    name = models.CharField(verbose_name="名称", max_length=32)
+    count = models.IntegerField(verbose_name="人口")
+
+    # 本质上数据库也是CharField，自动保存数据。
+    img = models.FileField(verbose_name="Logo", max_length=128, upload_to='city/')

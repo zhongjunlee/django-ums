@@ -12,7 +12,6 @@
     </style>
     {% block css %}{% endblock %}
 </head>
-<body>
 <nav class="navbar navbar-default">
     <div class="container">
         <div class="navbar-header">
@@ -29,6 +28,11 @@
             <ul class="nav navbar-nav">
                 <li><a href="/dept/list/">部门管理</a></li>
                 <li><a href="/user/list/">用户管理</a></li>
+                <li><a href="/chart/list/">数据统计</a></li>
+                <li><a href="/chart/highcharts/">Highcharts</a></li>
+                <li><a href="/upload/form/">Form上传</a></li>
+                <li><a href="/upload/modal/form/">ModalForm上传</a></li>
+                <li><a href="/city/list/">城市列表（文件）</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
 
@@ -47,13 +51,13 @@
     </div>
 </nav>
 
+<body>
 <div>
     {% block content %}{% endblock %}
 </div>
-
+</body>
 
 <script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
 <script src="{% static 'plugins/bootstrap.min.js' %}"></script>
 {% block js %}{% endblock %}
-</body>
 </html>

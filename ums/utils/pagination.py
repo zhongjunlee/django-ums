@@ -33,7 +33,7 @@ from django.utils.safestring import mark_safe
 
 class Pagination(object):
 
-    def __init__(self, request, queryset, page_size=2, page_param="page", plus=5):
+    def __init__(self, request, queryset, page_size=5, page_param="page", plus=5):
         """
         :param request: 请求的对象
         :param queryset: 符合条件的数据（根据这个数据给他进行分页处理）

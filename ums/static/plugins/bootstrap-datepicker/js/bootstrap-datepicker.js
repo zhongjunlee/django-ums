@@ -216,12 +216,12 @@
 			}
 			o.language = lang;
 
-			// Retrieve view index from any aliases
+			// Retrieve views index from any aliases
 			o.startView = this._resolveViewName(o.startView);
 			o.minViewMode = this._resolveViewName(o.minViewMode);
 			o.maxViewMode = this._resolveViewName(o.maxViewMode);
 
-			// Check view is between min and max
+			// Check views is between min and max
 			o.startView = Math.max(this.o.minViewMode, Math.min(this.o.maxViewMode, o.startView));
 
 			// true, false, or Number > 0

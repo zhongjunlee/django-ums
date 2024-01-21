@@ -39,21 +39,26 @@
             {{ form.password }}
             <span style="color: red;">{{ form.password.errors.0 }}</span>
         </div>
-{#        <div class="form-group">#}
-{#            <label for="id_code">图片验证码</label>#}
-{#            <div class="row">#}
-{#                <div class="col-xs-7">#}
-{#                    {{ form.code }}#}
-{#                    <span style="color: red;">{{ form.code.errors.0 }}</span>#}
-{#                </div>#}
-{#                <div class="col-xs-5">#}
-{#                    <img id="image_code" src="/image/code/" style="width: 125px;">#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
+        <div class="form-group">
+            <label for="id_code">图片验证码</label>
+            <div class="row">
+                <div class="col-xs-7">
+                    {{ form.code }}
+                    <span style="color: red;">{{ form.code.errors.0 }}</span>
+                </div>
+                <div class="col-xs-5">
+                    <img id="image_code" src="/image/code/" onclick="changeImg(this)" style="width: 125px;" />
+                </div>
+            </div>
+        </div>
         <input type="submit" value="登 录" class="btn btn-primary">
     </form>
 </div>
-
 </body>
+<script>
+    function changeImg(ths) {
+        // 硬编码
+        ths.src = '/image/code/?temp=' + Math.random();
+    }
+</script>
 </html>
